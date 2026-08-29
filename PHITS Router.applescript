@@ -12,7 +12,7 @@ on run {input, parameters}
 	set phitsBase to (do shell script "/bin/zsh -lc 'printf %s \"${PHITSPATH:-$HOME/phits}\"'")
 	
 	-- Program paths (as provided)
-	set appPHITSPad to phitsBase & "/phitspad/macos/PhitsPad.app"
+	set appPHITSPad to phitsBase & "/workbench/phitspad/macos/PhitsPad.app"
 	set appEPSPDF to phitsBase & "/bin/EPSPDF.app"
 	
 	-- Preferred text editor (fallback to TextEdit)
