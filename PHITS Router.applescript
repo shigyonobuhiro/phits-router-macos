@@ -12,7 +12,7 @@ on run {input, parameters}
 	set phitsBase to (do shell script "/bin/sh -lc 'if [ -n \"$PHITSPATH\" ]; then printf %s \"$PHITSPATH\"; else printf %s \"$HOME/phits\"; fi'")
 	
 	-- Program paths (as provided)
-	set appPHITSPad to phitsBase & "/phitspad/macos/PhitsPad.app"
+	set appPHITSPad to phitsBase & "/workbench/phitspad/macos/PhitsPad.app"
 	set appEPSPDF to phitsBase & "/bin/EPSPDF.app"
 	
 	-- Preferred text editor (fallback to TextEdit)
@@ -159,7 +159,7 @@ on chooserOpenWithDefault(p, defaultChoice, preferredEditorName, fallbackEditorN
 	set defaultItem to defaultChoice
 	if defaultItem is "" then set defaultItem to preferredEditorName
 	
-	set choice to choose from list options with title "Open withÉ" with prompt "Choose app for:
+	set choice to choose from list options with title "Open withÃ‰" with prompt "Choose app for:
 " & p default items {defaultItem}
 	if choice is false then return
 	
@@ -370,6 +370,6 @@ Ext: " & ext & "
 Textish: " & textish & "
 DCHAIN: " & isDchain & "
 
-Mods: " & Â
+Mods: " & Ã‚
 		"Cmd=" & isCmd & " Opt=" & isOpt & " Ctrl=" & isCtrl & " Shift=" & isShift buttons {"OK"} default button "OK"
 end dbg
